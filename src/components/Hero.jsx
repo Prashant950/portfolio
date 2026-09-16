@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  ArrowRight, 
-  Download, 
-  MapPin, 
-  CheckCircle2, 
+import {
+  ArrowRight,
+  Download,
+  MapPin,
+  CheckCircle2,
   Zap,
   Sparkles
 } from 'lucide-react';
@@ -39,8 +39,8 @@ export default function Hero({ onOpenResume }) {
   };
 
   return (
-    <section 
-      id="home" 
+    <section
+      id="home"
       className="hero-section"
       style={{
         position: 'relative',
@@ -55,7 +55,7 @@ export default function Hero({ onOpenResume }) {
     >
       <div className="container" style={{ position: 'relative', zIndex: 10, width: '100%' }}>
         {/* Responsive Grid layout for Hero */}
-        <div 
+        <div
           className="hero-grid"
           style={{
             display: 'grid',
@@ -205,8 +205,8 @@ export default function Hero({ onOpenResume }) {
                 marginBottom: '1.75rem',
               }}
             >
-              <a 
-                href="#projects" 
+              <a
+                href="#projects"
                 className="btn-primary"
                 onClick={triggerConfetti}
                 style={{ fontSize: '0.92rem', padding: '0.75rem 1.6rem' }}
@@ -215,14 +215,14 @@ export default function Hero({ onOpenResume }) {
                 <ArrowRight size={17} />
               </a>
 
-              <button
+              {/* <button
                 onClick={onOpenResume}
                 className="btn-secondary"
                 style={{ fontSize: '0.92rem', padding: '0.75rem 1.4rem' }}
               >
                 <Download size={17} />
-                <span>View / Download Resume</span>
-              </button>
+                <span>View / Download Resume</span> */}
+              {/* </button> */}
             </motion.div>
 
             {/* Trust badge */}

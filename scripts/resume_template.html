@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PRASHANT KUMAR SINGH - RESUME</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, Helvetica, -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #000000;
+      background: #ffffff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .page {
+      width: 210mm;
+      height: 297mm;
+      max-height: 297mm;
+      padding: 18mm 16mm;
+      position: relative;
+      page-break-after: always;
+      break-after: page;
+      background: #ffffff;
+      overflow: hidden;
+    }
+    .page-border {
+      position: absolute;
+      top: 10mm;
+      left: 10mm;
+      right: 10mm;
+      bottom: 10mm;
+      border: 1px solid #1a1a1a;
+      pointer-events: none;
+    }
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .header h1 {
+      font-size: 19pt;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+      color: #000000;
+    }
+    .header .sub-title {
+      font-size: 10.5pt;
+      font-weight: bold;
+      color: #111111;
+      margin-bottom: 6px;
+    }
+    .header .contact-row {
+      font-size: 9.2pt;
+      color: #111111;
+      line-height: 1.45;
+    }
+    .header .contact-row a {
+      color: #000000;
+      text-decoration: underline;
+    }
+    .section-title {
+      font-size: 10.5pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      border-bottom: 1.2px solid #000000;
+      padding-bottom: 2px;
+      margin-top: 14px;
+      margin-bottom: 6px;
+      color: #000000;
+    }
+    .summary-text {
+      font-size: 9.2pt;
+      line-height: 1.42;
+      text-align: justify;
+      color: #111111;
+    }
+    ul.bullet-list {
+      list-style-type: disc;
+      padding-left: 18px;
+      margin: 0;
+    }
+    ul.bullet-list li {
+      font-size: 9.1pt;
+      line-height: 1.38;
+      color: #111111;
+      margin-bottom: 3.5px;
+    }
+    .experience-item, .project-item {
+      margin-bottom: 9px;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 9.5pt;
+      margin-bottom: 2px;
+    }
+    .item-header .role-company {
+      font-weight: bold;
+      color: #000000;
+    }
+    .item-header .date-location {
+      font-size: 9.2pt;
+      font-style: italic;
+      color: #222222;
+      white-space: nowrap;
+    }
+    .project-title {
+      font-size: 9.6pt;
+      font-weight: bold;
+      color: #000000;
+    }
+    .project-title a {
+      color: #000000;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    .tech-stack {
+      font-size: 9pt;
+      font-style: italic;
+      color: #111111;
+      margin-top: 1px;
+      margin-bottom: 3px;
+    }
+    .tech-stack strong {
+      font-style: normal;
+    }
+    .education-list li {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE 1 -->
+  <div class="page">
+    <div class="page-border"></div>
+    <div class="content">
+      <div class="header">
+        <h1>PRASHANT KUMAR SINGH</h1>
+        <div class="sub-title">Full Stack Engineer | MERN Stack Developer</div>
+        <div class="contact-row">
+          <strong>Email:</strong> <a href="mailto:prashantsingh2640@gmail.com">prashantsingh2640@gmail.com</a> &nbsp;&nbsp; 
+          <strong>Phone:</strong> +91 9506536127 &nbsp;&nbsp; 
+          <strong>Location:</strong> Lucknow, UP, India
+        </div>
+        <div class="contact-row" style="margin-top: 3px;">
+          <strong>Portfolio:</strong> <a href="https://prashant-singh-portfolio.vercel.app/" target="_blank">prashant-singh-portfolio</a> &nbsp;&nbsp; 
+          <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/prashant-singh-436972240" target="_blank">LinkedIn Profile</a> &nbsp;&nbsp; 
+          <strong>GitHub:</strong> <a href="https://github.com/Prashant950?tab=repositories" target="_blank">GitHub Profile</a>
+        </div>
+      </div>
+
+      <div class="section-title">PROFESSIONAL SUMMARY</div>
+      <p class="summary-text">
+        Full-Stack Engineer with comprehensive hands-on expertise in designing, architecting, and deploying scalable, enterprise-grade web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js) and Next.js. Proven record in developing high-throughput RESTful APIs, asynchronous event architectures, microservices, and secure JWT/OTP authentication workflows. Adept at engineering omnichannel communication tools, WhatsApp Business Cloud APIs, payment integrations (Razorpay), and cloud storage (AWS S3) while maintaining optimal frontend performance and 99.9% application uptime.
+      </p>
+
+      <div class="section-title">TECHNICAL SKILLS</div>
+      <ul class="bullet-list">
+        <li><strong>Frontend Technologies:</strong> React.js, Next.js, React Native (Expo), Redux Toolkit, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Bootstrap 5</li>
+        <li><strong>Backend Technologies:</strong> Node.js, Express.js, RESTful APIs, Microservices, Python, Flask, WebSockets</li>
+        <li><strong>Databases &amp; Cloud:</strong> MongoDB, PostgreSQL, Mongoose ODM, AWS S3, Vercel, Git, GitHub</li>
+        <li><strong>Integrations &amp; Security:</strong> WhatsApp Business Cloud API, Razorpay Payment Gateway, JWT Auth, SMS/OTP Verification, RBAC</li>
+      </ul>
+
+      <div class="section-title">WORK EXPERIENCE</div>
+      
+      <div class="experience-item">
+        <div class="item-header">
+          <span class="role-company">Full Stack Developer | AIVIQONE Technology Pvt. Ltd, Delhi (Remote)</span>
+          <span class="date-location">Sep 2026 &ndash; Present</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Spearhead the end-to-end architecture and feature delivery for AIVIQONE's flagship SaaS platform, integrating omnichannel communication and enterprise CRM automation.</li>
+          <li>Engineered robust WhatsApp Business Cloud API workflows and bi-directional WebSockets to facilitate real-time chat sync, automated bot triggers, and unified inbox management.</li>
+          <li>Developed high-performance RESTful APIs and MongoDB aggregation pipelines for multi-tenant lead management, funnel stage analytics, and customer lifecycle tracking.</li>
+          <li>Collaborate in a remote-first agile environment, optimizing database queries and backend microservices to achieve sub-100ms API response times across peak lead ingestion volumes.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item" style="margin-bottom: 0;">
+        <div class="item-header">
+          <span class="role-company">MERN Stack Developer | Snow Fountain Consultants Pvt. Ltd., Lucknow, UP</span>
+          <span class="date-location">Sep 2025 - Sep 2026</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Architected and maintained dynamic client-side interfaces and scalable backend microservices utilizing React.js, Node.js, Express.js, and MongoDB.</li>
+          <li>Designed and optimized high-throughput RESTful APIs, streamlining data serialization and enhancing database indexing for fast query execution.</li>
+          <li>Led code reviews, debugging sessions, and performance benchmarking to eliminate bottlenecks and maintain &gt;99.9% application uptime.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="page">
+    <div class="page-border"></div>
+    <div class="content">
+      <div class="experience-item" style="margin-bottom: 10px;">
+        <div class="item-header">
+          <span class="role-company">Full Stack Developer Intern | TechPath Research &amp; Development Pvt. Ltd, Varanasi,</span>
+          <span class="date-location">2024 &ndash; 2025</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Developed modular, cross-browser responsive web applications adhering strictly to modern semantic HTML5, CSS3, and Bootstrap 5 guidelines.</li>
+          <li>Collaborated with senior engineers to diagnose frontend UI bugs, enhance accessibility standards, and optimize mobile view rendering.</li>
+        </ul>
+      </div>
+
+      <div class="section-title" style="margin-top: 4px;">KEY PROJECTS</div>
+
+      <div class="project-item">
+        <div class="project-title">
+          AIVIQONE &ndash; All-in-One CRM &amp; Omnichannel Business Automation Platform <a href="https://aiviqone.com/" target="_blank">[Live Demo]</a>
+        </div>
+        <div class="tech-stack">
+          <strong>Tech Stack:</strong> React.js, Node.js, Express.js, MongoDB, WebSockets, WhatsApp Cloud API, REST APIs
+        </div>
+        <ul class="bullet-list">
+          <li>Engineered a scalable omnichannel business suite consolidating multi-channel leads, contact books, dynamic sales pipelines, and customer journey tracking.</li>
+          <li>Integrated official WhatsApp Cloud API, SMS gateways, and automated chat workflows, enabling continuous auto-replies and instant CRM ticket assignment.</li>
+          <li>Implemented customizable role-based sales management dashboards providing actionable insights into conversion funnels, agent performance, and team KPIs.</li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <div class="project-title">
+          GoDrive Self Drive &ndash; Car Rental &amp; Instant Fleet Booking Portal <a href="https://www.godriveselfdrive.com/" target="_blank">[Live Demo]</a>
+        </div>
+        <div class="tech-stack">
+          <strong>Tech Stack:</strong> React.js, Node.js, Express.js, MongoDB, Razorpay, REST APIs
+        </div>
+        <ul class="bullet-list">
+          <li>Developed an end-to-end self-drive and chauffeur car rental platform featuring transparent vehicle category browsing (SUVs, sedans, luxury fleets).</li>
+          <li>Engineered an instant dynamic fare calculator and online token reservation system with secure digital payment processing via Razorpay.</li>
+          <li>Implemented a rapid 2-minute digital KYC verification pipeline allowing customers to securely upload Driving License and Govt ID documents with real-time verification.</li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <div class="project-title">
+          SathiMeet &ndash; On-Demand Social &amp; Lifestyle Support Services Platform <a href="https://sathimeet.com/" target="_blank">[Live Demo]</a>
+        </div>
+        <div class="tech-stack">
+          <strong>Tech Stack:</strong> React.js, Node.js, Express.js, MongoDB, JWT Auth, Geolocation APIs
+        </div>
+        <ul class="bullet-list">
+          <li>Built a nationwide on-demand lifestyle and companion support services platform covering 700+ districts across India with multi-category booking workflows.</li>
+          <li>Implemented verified partner onboarding, geo-location proximity matching, transparent hourly rate structures, and secure booking management.</li>
+          <li>Architected a comprehensive role-based portal with separate user, verified partner, and admin moderation panels prioritizing safety and consent.</li>
+        </ul>
+      </div>
+
+      <div class="project-item" style="margin-bottom: 0;">
+        <div class="project-title">
+          Lovely Gas Company &ndash; Digital Gas Distribution &amp; Utility Management Portal <a href="https://lovely-gas-company.vercel.app/" target="_blank">[Live Demo]</a>
+        </div>
+        <div class="tech-stack">
+          <strong>Tech Stack:</strong> React.js, Tailwind CSS, Node.js, Express.js, MongoDB, Vercel
+        </div>
+        <ul class="bullet-list">
+          <li>Designed and deployed a responsive LPG cylinder booking and commercial gas utility service web portal with automated delivery scheduling.</li>
+          <li>Created intuitive customer onboarding, online cylinder refill requests, real-time dispatch tracking, and consumer support ticketing modules.</li>
+          <li>Optimized frontend performance, achieving a 95+ Google Lighthouse rating and ultra-fast initial page load times on low-bandwidth networks.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 3 -->
+  <div class="page">
+    <div class="page-border"></div>
+    <div class="content">
+      <div class="project-item">
+        <div class="project-title">
+          Mini Digi-Locker App &ndash; Role-Based Secure Document Management System
+        </div>
+        <div class="tech-stack">
+          <strong>Tech Stack:</strong> React Native (Expo), Node.js, Express.js, MongoDB, AWS S3, JWT
+        </div>
+        <ul class="bullet-list">
+          <li>Architected a secure cross-platform mobile document vault utilizing React Native Expo and encrypted cloud storage on AWS S3.</li>
+          <li>Engineered OTP-based mobile authentication and granular Role-Based Access Control (RBAC) separating Admin and User privileges.</li>
+          <li>Created real-time document sharing with dual-factor OTP approval workflow, safeguarding sensitive user files from unauthorized distribution.</li>
+        </ul>
+      </div>
+
+      <div class="project-item" style="margin-bottom: 12px;">
+        <div class="project-title">
+          Full-Stack E-Commerce Platform with Payment Gateway
+        </div>
+        <div class="tech-stack">
+          <strong>Tech Stack:</strong> React.js, Node.js, Express.js, MongoDB, Razorpay API, Redux Toolkit
+        </div>
+        <ul class="bullet-list">
+          <li>Built a full-featured e-commerce application with product filtering, category management, persistent shopping carts, and wishlists.</li>
+          <li>Integrated Razorpay payment gateway API with webhook signature verification for automated payment processing and real-time order status updates.</li>
+        </ul>
+      </div>
+
+      <div class="section-title">EDUCATION</div>
+      <ul class="bullet-list education-list">
+        <li>
+          <strong>B.Tech in Computer Science &amp; Engineering</strong> &mdash; Rameshwaram Institute of Technology and Management, Lucknow, UP (2019 &ndash; 2023) | CGPA: 7.2
+        </li>
+        <li>
+          <strong>Intermediate (Class XII)</strong> &mdash; S.P.N. Inter College, Tiloi, Amethi, UP (2018 &ndash; 2019) | Percentage: 61%
+        </li>
+        <li>
+          <strong>High School (Class X)</strong> &mdash; S.P.N. Inter College, Tiloi, Amethi, UP (2017 &ndash; 2018) | Percentage: 72%
+        </li>
+      </ul>
+
+      <div class="section-title" style="margin-top: 14px;">CERTIFICATIONS</div>
+      <ul class="bullet-list">
+        <li>
+          <strong>Certified Full Stack Web Developer &mdash; Edureka</strong>
+          <div style="margin-top: 2px; color: #222222; font-size: 9pt;">
+            Comprehensive specialization in MERN Stack, RESTful API architecture, Database schema design, and AWS S3 cloud deployment.
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>

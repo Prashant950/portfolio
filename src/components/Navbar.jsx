@@ -415,23 +415,6 @@ export default function Navbar({ theme, toggleTheme, onOpenResume }) {
                   <ArrowUpRight size={16} />
                 </a>
 
-                <button
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    onOpenResume();
-                  }}
-                  className="btn-secondary"
-                  style={{
-                    width: '100%',
-                    padding: '0.65rem',
-                    fontSize: '0.9rem',
-                    justifyContent: 'center'
-                  }}
-                >
-                  <FileText size={16} />
-                  <span>View Resume</span>
-                </button>
-
                 {/* Direct Social Links */}
                 <div style={{ display: 'flex', justifyContent: 'center', gap: '0.75rem', marginTop: '0.5rem' }}>
                   <a

@@ -76,7 +76,9 @@ export default function Projects({ onSelectProject }) {
           .project-card-image-wrapper {
             position: relative;
             width: 100%;
-            height: 195px;
+            aspect-ratio: 16 / 9;
+            min-height: 160px;
+            max-height: 220px;
             overflow: hidden;
             background: #0b0f19;
             border-bottom: 1px solid var(--border-subtle);
@@ -89,15 +91,120 @@ export default function Projects({ onSelectProject }) {
             transition: transform 0.45s ease;
           }
           .project-card-glass:hover .project-card-image {
-            transform: scale(1.05);
+            transform: scale(1.04);
+          }
+          .project-card-body {
+            padding: 1.35rem 1.45rem 1.15rem 1.45rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+          }
+          .project-card-footer {
+            padding: 0.85rem 1.25rem;
+            border-top: 1px solid var(--border-subtle);
+            background: rgba(0, 0, 0, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+          }
+          .project-btn-details {
+            height: 38px;
+            padding: 0 0.95rem;
+            font-size: 0.82rem;
+            font-weight: 600;
+            border-radius: 0.55rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.35rem;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: all 0.2s ease;
+          }
+          .project-btn-group-right {
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+          }
+          .project-btn-github {
+            width: 38px;
+            height: 38px;
+            border-radius: 0.55rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--text-primary) !important;
+            text-decoration: none;
+            transition: all 0.2s ease;
+          }
+          .project-btn-live {
+            height: 38px;
+            padding: 0 1rem;
+            font-size: 0.82rem;
+            font-weight: 700;
+            border-radius: 0.55rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            white-space: nowrap;
+            text-decoration: none;
+            transition: all 0.2s ease;
           }
           @media (max-width: 640px) {
             .projects-responsive-grid {
               grid-template-columns: 1fr !important;
               gap: 1.35rem !important;
             }
-            .project-card-image-wrapper {
-              height: 175px !important;
+            .project-card-body {
+              padding: 1.15rem 1.15rem 0.95rem 1.15rem !important;
+            }
+            .project-card-footer {
+              padding: 0.75rem 0.95rem !important;
+              gap: 0.45rem !important;
+            }
+            .project-btn-details {
+              height: 36px !important;
+              flex: 1 !important;
+              min-width: 0 !important;
+              padding: 0 0.5rem !important;
+              font-size: 0.8rem !important;
+            }
+            .project-btn-group-right {
+              flex: 1.35 !important;
+              min-width: 0 !important;
+              gap: 0.35rem !important;
+            }
+            .project-btn-github {
+              width: 36px !important;
+              height: 36px !important;
+            }
+            .project-btn-live {
+              height: 36px !important;
+              flex: 1 !important;
+              min-width: 0 !important;
+              padding: 0 0.6rem !important;
+              font-size: 0.8rem !important;
+            }
+          }
+          @media (max-width: 380px) {
+            .project-card-footer {
+              padding: 0.65rem 0.75rem !important;
+              gap: 0.3rem !important;
+            }
+            .project-btn-details {
+              padding: 0 0.4rem !important;
+              font-size: 0.75rem !important;
+            }
+            .project-btn-live {
+              padding: 0 0.45rem !important;
+              font-size: 0.75rem !important;
+            }
+            .project-btn-github {
+              width: 34px !important;
+              height: 34px !important;
             }
           }
         `}</style>
@@ -202,7 +309,7 @@ export default function Projects({ onSelectProject }) {
                   ) : (
                     <div 
                       style={{ 
-                        height: '130px', 
+                        height: '150px', 
                         background: 'linear-gradient(135deg, rgba(0, 210, 255, 0.1) 0%, rgba(0, 112, 243, 0.15) 100%)',
                         display: 'flex',
                         alignItems: 'center',
@@ -215,14 +322,14 @@ export default function Projects({ onSelectProject }) {
                   )}
 
                   {/* Card Content Body */}
-                  <div style={{ padding: '1.35rem 1.45rem 1.15rem 1.45rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                  <div className="project-card-body">
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.45rem' }}>
                       <span style={{ fontSize: '0.76rem', color: 'var(--accent-cyan)', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                         {project.category}
                       </span>
                     </div>
 
-                    <h3 style={{ fontSize: '1.2rem', fontWeight: '800', marginBottom: '0.3rem', lineHeight: '1.35', color: 'var(--text-primary)' }}>
+                    <h3 style={{ fontSize: 'clamp(1.1rem, 3vw, 1.24rem)', fontWeight: '800', marginBottom: '0.3rem', lineHeight: '1.35', color: 'var(--text-primary)' }}>
                       {project.title}
                     </h3>
                     <h4 style={{ fontSize: '0.82rem', color: 'var(--text-muted)', fontWeight: '600', marginBottom: '0.85rem' }}>
@@ -256,58 +363,31 @@ export default function Projects({ onSelectProject }) {
                   </div>
 
                   {/* Card Footer & Action Buttons */}
-                  <div 
-                    style={{
-                      padding: '0.95rem 1.45rem',
-                      borderTop: '1px solid var(--border-subtle)',
-                      background: 'rgba(0,0,0,0.12)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'space-between',
-                      gap: '0.65rem',
-                    }}
-                  >
+                  <div className="project-card-footer">
                     <button
                       onClick={() => onSelectProject(project)}
-                      className="btn-secondary"
-                      style={{
-                        padding: '0.45rem 0.85rem',
-                        fontSize: '0.8rem',
-                        gap: '0.35rem',
-                        borderRadius: '0.5rem',
-                      }}
+                      className="btn-secondary project-btn-details"
                     >
                       <Info size={14} />
                       <span>Details</span>
                     </button>
 
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
+                    <div className="project-btn-group-right">
                       <a
                         href={project.githubUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="btn-secondary"
-                        style={{ padding: '0.45rem 0.7rem', borderRadius: '0.5rem' }}
+                        className="btn-secondary project-btn-github"
                         title="View GitHub Source"
                       >
-                        <GithubIcon size={15} />
+                        <GithubIcon size={16} />
                       </a>
                       
                       <a
                         href={project.liveUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="btn-primary"
-                        style={{ 
-                          padding: '0.45rem 0.95rem', 
-                          fontSize: '0.82rem', 
-                          fontWeight: '700',
-                          borderRadius: '0.5rem',
-                          display: 'inline-flex',
-                          alignItems: 'center',
-                          gap: '0.4rem',
-                          textDecoration: 'none'
-                        }}
+                        className="btn-primary project-btn-live"
                         title={`Open live website: ${project.title}`}
                       >
                         <span>Live Demo</span>

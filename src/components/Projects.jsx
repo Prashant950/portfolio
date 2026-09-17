@@ -55,6 +55,13 @@ export default function Projects({ onSelectProject }) {
         color: '#a855f7',
       };
     }
+    if (text.includes('privacy') || text.includes('utility')) {
+      return {
+        background: 'rgba(20, 184, 166, 0.12)',
+        borderColor: 'rgba(20, 184, 166, 0.35)',
+        color: '#14b8a6',
+      };
+    }
     return {
       background: 'rgba(56, 189, 248, 0.12)',
       borderColor: 'rgba(56, 189, 248, 0.35)',

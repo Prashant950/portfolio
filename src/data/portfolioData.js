@@ -173,6 +173,27 @@ export const projects = [
     stats: { service: "Same-Day Dispatch", support: "WhatsApp Live", performance: "Fast Response" }
   },
   {
+    id: "selfattest-studio",
+    title: "SelfAttest Studio – Photo, Signature & Resize Utility",
+    subtitle: "Client-Side Document Photo & Signature Processing Studio",
+    category: "Web Apps",
+    badge: "Privacy & Utility",
+    featured: true,
+    image: "/projects/selfattest.png",
+    description: "A 100% private, client-side browser utility for attesting signatures on photos, adding customized name & date stamps, resizing to official government/exam dimensions (Passport 3.5×4.5cm, PAN, Postcard, 240×320px), and compressing image file sizes to target KB limits without server uploads.",
+    features: [
+      "Client-side photo attestation with live canvas signature pad & transparent signature overlay.",
+      "Custom name, date & self-attestation stamp generator with interactive drag-and-drop placement.",
+      "Multi-format document resizer supporting Passport (3.5×4.5 cm), PAN card, 240×320px, and Postcard (4×6 in).",
+      "Dynamic KB image compression engine to meet strict official exam & portal upload requirements.",
+      "Zero server uploads ensuring 100% data privacy and instant browser-based processing."
+    ],
+    techStack: ["HTML5 Canvas", "JavaScript (ES6+)", "Client-Side Image Processing", "CSS3", "Vercel Deploy"],
+    githubUrl: "https://github.com/Prashant950?tab=repositories",
+    liveUrl: "https://selfattest-studio.vercel.app/",
+    stats: { privacy: "100% In-Browser", resize: "Passport / PAN / SSC", compress: "Exact KB Target" }
+  },
+  {
     id: "fittrack-smartwatch",
     title: "FitTrack Smartwatch & Fitness Portal",
     subtitle: "Smart Fitness & Wearable Device Showcase",

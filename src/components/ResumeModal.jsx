@@ -370,6 +370,26 @@ export default function ResumeModal({ isOpen, onClose }) {
                 <div className="resume-item">
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap' }}>
                     <span style={{ fontWeight: '700', fontSize: '13px', color: '#000000' }}>
+                      SelfAttest Studio – Photo Attestation, Signature & Document Resizing Utility{' '}
+                      <a href="https://selfattest-studio.vercel.app/" target="_blank" rel="noreferrer" style={{ color: '#000000', textDecoration: 'underline', fontWeight: '700' }}>
+                        [Live Demo]
+                      </a>
+                    </span>
+                  </div>
+                  <div style={{ fontStyle: 'italic', fontSize: '12px', color: '#334155', margin: '1px 0 3px 0' }}>
+                    <strong>Tech Stack:</strong> HTML5 Canvas, JavaScript (ES6+), Client-Side Image Processing, CSS3, Vercel
+                  </div>
+                  <ul style={{ listStyleType: 'disc', paddingLeft: '1.25rem', margin: 0, display: 'flex', flexDirection: 'column', gap: '2px', color: '#1e293b', fontSize: '12.5px', lineHeight: '1.38' }}>
+                    <li>Engineered a 100% private, client-side browser utility for attesting signatures and name & date stamps onto photos without server uploads.</li>
+                    <li>Developed multi-preset cropping and resizing tools supporting official document specifications (Passport 3.5×4.5cm, PAN Card, Postcard 4×6, 240×320px).</li>
+                    <li>Implemented interactive canvas drawing pad, customizable typography overlays, and precise KB target image compression engine for exam forms.</li>
+                  </ul>
+                </div>
+
+                {/* Project 6 */}
+                <div className="resume-item">
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap' }}>
+                    <span style={{ fontWeight: '700', fontSize: '13px', color: '#000000' }}>
                       Mini Digi-Locker App – Role-Based Secure Document Management System
                     </span>
                   </div>

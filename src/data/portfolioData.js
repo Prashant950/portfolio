@@ -212,6 +212,47 @@ export const projects = [
     githubUrl: "https://github.com/Prashant950?tab=repositories",
     liveUrl: "https://fittrack-ten-snowy.vercel.app/",
     stats: { tracking: "Real-time Metrics", performance: "60 FPS UI", responsiveness: "100% Mobile Ready" }
+  },
+  {
+    id: "style-well-dyd",
+    title: "Style Well DYD – Luxury Interior Studio",
+    subtitle: "Transforming Spaces & Luxury Interior Architecture",
+    category: "Full Stack",
+    badge: "Interior & Architecture",
+    featured: true,
+    image: "/projects/style-well.png",
+    description: "Turnkey luxury interior design studio platform in Lucknow showcasing bespoke residences, modular kitchens, 3D walkthrough visualizations, and instant quotation & consultation bookings.",
+    features: [
+      "Interactive luxury portfolio showcase with 3D interior walkthroughs and modular layout plans.",
+      "Instant consultation booking engine with real-time WhatsApp quote inquiry integration.",
+      "Comprehensive project showcase for luxury bedrooms, bespoke residences, and commercial spaces.",
+      "High-speed optimized assets with modern glassmorphism aesthetics and responsive performance."
+    ],
+    techStack: ["React.js", "Tailwind CSS", "JavaScript (ES6+)", "Framer Motion", "Vercel Deploy"],
+    githubUrl: "https://github.com/Prashant950?tab=repositories",
+    liveUrl: "https://style-interior-design.vercel.app/",
+    stats: { spaces: "250+ Spaces", warranty: "10-Year Warranty", rating: "4.9 ★ Rating" }
+  },
+  {
+    id: "zepsocial-smm",
+    title: "ZepSocial – Social Media Growth & SMM Engine",
+    subtitle: "India's #1 High-Speed SMM & Social Reach Platform",
+    category: "Full Stack",
+    badge: "SMM Panel • Coming Soon",
+    featured: true,
+    isComingSoon: true,
+    image: "/projects/zepsocial.png",
+    description: "Wholesale SMM and social media growth platform engineered to accelerate account reach, authentic followers, likes, reel reach, and video views with instant automated order delivery, UPI/Crypto checkout, and real-time replenishment.",
+    features: [
+      "Automated purchase requests for Instagram followers, likes, reel reach, and YouTube views.",
+      "Instant 60-second automated dispatch engine with 30-day free auto-refill guarantees.",
+      "Multi-channel checkout supporting UPI, Credit/Debit cards, and Crypto payments with zero password required.",
+      "Wholesale catalog featuring 250+ active social media growth services with real-time tracking."
+    ],
+    techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Payment Gateway", "REST APIs"],
+    githubUrl: "https://github.com/Prashant950?tab=repositories",
+    liveUrl: "#",
+    stats: { start: "Instant 60s Start", catalog: "250+ Services", status: "Coming Soon 🚀" }
   }
 ];
 

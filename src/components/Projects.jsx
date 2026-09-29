@@ -4,7 +4,9 @@ import {
   FolderGit2, 
   ExternalLink, 
   Sparkles,
-  Info
+  Info,
+  Clock,
+  Rocket
 } from 'lucide-react';
 import { GithubIcon } from './SocialIcons';
 import { projects } from '../data/portfolioData';
@@ -20,6 +22,20 @@ export default function Projects({ onSelectProject }) {
 
   const getBadgeStyle = (badge) => {
     const text = (badge || '').toLowerCase();
+    if (text.includes('coming soon')) {
+      return {
+        background: 'rgba(236, 72, 153, 0.14)',
+        borderColor: 'rgba(236, 72, 153, 0.45)',
+        color: '#f472b6',
+      };
+    }
+    if (text.includes('interior') || text.includes('architecture')) {
+      return {
+        background: 'rgba(234, 179, 8, 0.14)',
+        borderColor: 'rgba(234, 179, 8, 0.45)',
+        color: '#fbbf24',
+      };
+    }
     if (text.includes('saas') || text.includes('enterprise')) {
       return {
         background: 'rgba(0, 210, 255, 0.12)',
@@ -34,7 +50,7 @@ export default function Projects({ onSelectProject }) {
         color: '#f59e0b',
       };
     }
-    if (text.includes('dating') || text.includes('social')) {
+    if (text.includes('dating') || text.includes('social') || text.includes('smm')) {
       return {
         background: 'rgba(244, 63, 94, 0.12)',
         borderColor: 'rgba(244, 63, 94, 0.35)',
@@ -390,16 +406,34 @@ export default function Projects({ onSelectProject }) {
                         <GithubIcon size={16} />
                       </a>
                       
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="btn-primary project-btn-live"
-                        title={`Open live website: ${project.title}`}
-                      >
-                        <span>Live Demo</span>
-                        <ExternalLink size={13} />
-                      </a>
+                      {project.isComingSoon ? (
+                        <button
+                          onClick={() => onSelectProject(project)}
+                          className="project-btn-live"
+                          style={{
+                            background: 'rgba(236, 72, 153, 0.15)',
+                            border: '1px solid rgba(236, 72, 153, 0.45)',
+                            color: '#f472b6',
+                            cursor: 'pointer',
+                            padding: '0 0.85rem'
+                          }}
+                          title="View upcoming details"
+                        >
+                          <Clock size={13} />
+                          <span>Coming Soon</span>
+                        </button>
+                      ) : (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="btn-primary project-btn-live"
+                          title={`Open live website: ${project.title}`}
+                        >
+                          <span>Live Demo</span>
+                          <ExternalLink size={13} />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </motion.div>

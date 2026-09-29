@@ -7,7 +7,8 @@ import {
   FolderGit2,
   Sparkles,
   Zap,
-  Code2
+  Code2,
+  Clock
 } from 'lucide-react';
 import { GithubIcon } from './SocialIcons';
 
@@ -214,16 +215,39 @@ export default function ProjectModal({ project, onClose }) {
 
           {/* Action CTAs */}
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', borderTop: '1px solid var(--border-subtle)', paddingTop: '1.25rem' }}>
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="btn-primary"
-              style={{ flex: 1, minWidth: '170px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '0.65rem 1.25rem', fontSize: '0.88rem' }}
-            >
-              <ExternalLink size={15} />
-              <span>Open Live Website</span>
-            </a>
+            {project.isComingSoon ? (
+              <div
+                style={{
+                  flex: 1,
+                  minWidth: '170px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '0.5rem',
+                  padding: '0.65rem 1.25rem',
+                  fontSize: '0.88rem',
+                  fontWeight: '700',
+                  borderRadius: '0.6rem',
+                  background: 'rgba(236, 72, 153, 0.15)',
+                  border: '1px solid rgba(236, 72, 153, 0.45)',
+                  color: '#f472b6',
+                }}
+              >
+                <Clock size={16} />
+                <span>Launching Soon 🚀</span>
+              </div>
+            ) : (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-primary"
+                style={{ flex: 1, minWidth: '170px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '0.65rem 1.25rem', fontSize: '0.88rem' }}
+              >
+                <ExternalLink size={15} />
+                <span>Open Live Website</span>
+              </a>
+            )}
 
             <a
               href={project.githubUrl}

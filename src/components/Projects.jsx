@@ -103,6 +103,8 @@ export default function Projects({ onSelectProject }) {
             min-height: 160px;
             max-height: 220px;
             overflow: hidden;
+            border-top-left-radius: 0 !important;
+            border-top-right-radius: 0 !important;
             background: #0b0f19;
             border-bottom: 1px solid var(--border-subtle);
           }
@@ -111,6 +113,8 @@ export default function Projects({ onSelectProject }) {
             height: 100%;
             object-fit: cover;
             object-position: top center;
+            border-top-left-radius: 0 !important;
+            border-top-right-radius: 0 !important;
             transition: transform 0.45s ease;
           }
           .project-card-glass:hover .project-card-image {
@@ -308,7 +312,10 @@ export default function Projects({ onSelectProject }) {
                   transition={{ duration: 0.3, delay: index * 0.06 }}
                   className="glass-panel project-card-glass"
                   style={{
-                    borderRadius: '1.15rem',
+                    borderTopLeftRadius: '0px',
+                    borderTopRightRadius: '0px',
+                    borderBottomLeftRadius: '0.85rem',
+                    borderBottomRightRadius: '0.85rem',
                     overflow: 'hidden',
                     display: 'flex',
                     flexDirection: 'column',

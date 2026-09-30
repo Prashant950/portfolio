@@ -96,6 +96,32 @@ export default function Hero({ onOpenResume }) {
                 left: -6px !important;
                 bottom: -28px !important;
               }
+            @media (max-width: 640px) {
+              .hero-specialized-wrapper {
+                gap: 0.35rem !important;
+                font-size: 0.78rem !important;
+                max-width: 100% !important;
+              }
+              .hero-specialized-label {
+                font-size: 0.78rem !important;
+              }
+              .hero-specialized-badge {
+                font-size: 0.76rem !important;
+                padding: 0.15rem 0.5rem !important;
+              }
+            }
+            @media (max-width: 380px) {
+              .hero-specialized-wrapper {
+                gap: 0.25rem !important;
+                font-size: 0.72rem !important;
+              }
+              .hero-specialized-label {
+                font-size: 0.72rem !important;
+              }
+              .hero-specialized-badge {
+                font-size: 0.7rem !important;
+                padding: 0.12rem 0.4rem !important;
+              }
             }
           `}</style>
 
@@ -138,15 +164,17 @@ export default function Hero({ onOpenResume }) {
               </span>
             </motion.h1>
 
-            {/* Rotating Role Badge */}
+            {/* Rotating Role Badge - Always in one line */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.15 }}
+              className="hero-specialized-wrapper"
               style={{
-                display: 'flex',
+                display: 'inline-flex',
                 alignItems: 'center',
-                flexWrap: 'wrap',
+                flexWrap: 'nowrap',
+                whiteSpace: 'nowrap',
                 gap: '0.5rem',
                 fontSize: '0.95rem',
                 fontWeight: '600',
@@ -154,13 +182,16 @@ export default function Hero({ onOpenResume }) {
                 marginBottom: '1rem',
               }}
             >
-              <span style={{ color: 'var(--text-secondary)' }}>Specialized in:</span>
+              <span className="hero-specialized-label" style={{ color: 'var(--text-secondary)', whiteSpace: 'nowrap', flexShrink: 0 }}>
+                Specialized in:
+              </span>
               <motion.span
                 key={currentRoleIndex}
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -8 }}
                 transition={{ duration: 0.25 }}
+                className="hero-specialized-badge"
                 style={{
                   color: 'var(--accent-cyan)',
                   background: 'var(--badge-bg)',
@@ -169,7 +200,9 @@ export default function Hero({ onOpenResume }) {
                   border: '1px solid var(--badge-border)',
                   fontFamily: 'Outfit, sans-serif',
                   fontWeight: '600',
-                  fontSize: '0.9rem'
+                  fontSize: '0.9rem',
+                  whiteSpace: 'nowrap',
+                  display: 'inline-block'
                 }}
               >
                 {roleKeywords[currentRoleIndex]}

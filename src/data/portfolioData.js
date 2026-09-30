@@ -214,6 +214,26 @@ export const projects = [
     stats: { tracking: "Real-time Metrics", performance: "60 FPS UI", responsiveness: "100% Mobile Ready" }
   },
   {
+    id: "loreal-unisex-salon",
+    title: "Loreal Salon & Bridal Studio",
+    subtitle: "Couture Bridal, HD Makeover & Luxury Hair Artistry",
+    category: "Full Stack",
+    badge: "Beauty & Luxury Salon",
+    featured: true,
+    image: "/projects/loreal-salon.png",
+    description: "Luxury salon & bridal studio web platform in Indira Nagar, Lucknow featuring couture bridal trousseau packages, HD celebrity makeovers, L'Oréal Professionnel hair spa rituals, and instant WhatsApp appointment reservations.",
+    features: [
+      "Signature bridal & pre-bridal portfolio with high-definition celebrity makeover lookbooks.",
+      "Direct online consultation and instant WhatsApp appointment reservation engine.",
+      "Comprehensive salon service catalog covering Balayage, Keratin, Luxury Facials & Groom Styling.",
+      "4.9★ Google customer ratings integration with verified client testimonials and location map navigation."
+    ],
+    techStack: ["React.js", "Tailwind CSS", "JavaScript (ES6+)", "Framer Motion", "Vercel Deploy"],
+    githubUrl: "https://github.com/Prashant950?tab=repositories",
+    liveUrl: "https://loreal-beauty-parlour.vercel.app/",
+    stats: { rating: "4.9 ★ (180+ Reviews)", services: "Hair • Skin • Bridal", booking: "Instant WhatsApp" }
+  },
+  {
     id: "style-well-dyd",
     title: "Style Well DYD – Luxury Interior Studio",
     subtitle: "Transforming Spaces & Luxury Interior Architecture",

@@ -71,9 +71,8 @@ export default function ProjectModal({ project, onClose }) {
           }
           .project-modal-image-box {
             width: 100%;
-            aspect-ratio: 16 / 9;
-            max-height: 240px;
-            min-height: 150px;
+            aspect-ratio: 2.12 / 1;
+            max-height: 340px;
             border-radius: 0.75rem;
             overflow: hidden;
             margin-bottom: 1.25rem;
@@ -83,8 +82,9 @@ export default function ProjectModal({ project, onClose }) {
           .project-modal-image {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            object-position: top center;
+            object-fit: contain;
+            background: #060913;
+            object-position: center;
           }
           .project-modal-title {
             font-size: clamp(1.2rem, 3.5vw, 1.55rem);

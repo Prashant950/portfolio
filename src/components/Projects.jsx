@@ -99,9 +99,7 @@ export default function Projects({ onSelectProject }) {
           .project-card-image-wrapper {
             position: relative;
             width: 100%;
-            aspect-ratio: 16 / 9;
-            min-height: 160px;
-            max-height: 220px;
+            aspect-ratio: 2.12 / 1;
             overflow: hidden;
             border-top-left-radius: 0 !important;
             border-top-right-radius: 0 !important;
@@ -112,13 +110,13 @@ export default function Projects({ onSelectProject }) {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: top center;
+            object-position: center center;
             border-top-left-radius: 0 !important;
             border-top-right-radius: 0 !important;
             transition: transform 0.45s ease;
           }
           .project-card-glass:hover .project-card-image {
-            transform: scale(1.04);
+            transform: scale(1.03);
           }
           .project-card-body {
             padding: 1.35rem 1.45rem 1.15rem 1.45rem;
